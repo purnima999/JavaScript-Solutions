@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Typer Web</title>
+</head>
+
+<body>
+    <div class="typing-space-card">
+        <h4>Test Your Typing Speed</h4>
+        <h3>Time:<span id="timer"></span></h3>
+        <p className="distaplayHead">To start typing click on Start..<br /><span id="displayText"></span></p>
+        <h2 id="alertMsg"></h2>
+        <textarea id="textArea" oninput="typedWords(this)"></textarea>
+        <button id="button1">Start </button><button id="button2"> Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
