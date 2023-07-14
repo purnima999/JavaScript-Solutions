@@ -72,8 +72,10 @@
   return Substrlen;
 }
 console.log(lengthOfLongestSubstring("ab"));
+```
 
 5. find longest sub string without repeating a any character
+
 ```
 var lengthOfLongestSubstring = function (s) {
     var max = 0, current_string = "", i, char, pos;
