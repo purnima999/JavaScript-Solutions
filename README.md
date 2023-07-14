@@ -28,23 +28,50 @@
    Input: s = "pwwkew"
    Output: 3
    Explanation: The answer is "wke", with the length of 3. Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+   Input: s = "aab"
+   Output: 2
+   Input: s = "ab"
+   Output: 2
+   Input: s = "aa"
+   Output: 1
+
+#if any string is having same character side by side then find the largest substring excluding the character
    ```
    var lengthOfLongestSubstring = function (s) {
-    let string = s;
-    let splittedStr = string?.split("");
-    let strLen = string?.length;
-    let result = splittedStr?.map((x, i) => (splittedStr[i] !== splittedStr[i + 1]) ? splittedStr.indexOf(splittedStr[i]) : "");
-    let index = result?.filter((z, i) => result.indexOf(z) !== i);
-    let duplicateInd = index?.filter((t, i) => index.indexOf(t) === i);
-    let diff = (strLen - 1) - duplicateInd?.length;
-    let Substrlen;
-    if (index < diff)
-        Substrlen = result.slice(index[0] + 2, strLen)?.length
-    else {
-        Substrlen = duplicateInd?.length;
-    }
-    return Substrlen
+  let string = s;
+  let splittedStr = string?.split("");
+  let strLen = string?.length;
+  let result = splittedStr?.map((x, i) =>
+    splittedStr[i] !== splittedStr[i + 1]
+      ? splittedStr.indexOf(splittedStr[i])
+      : ""
+  );
+  let index =
+    result?.[0] === "" && result[1] === 0 && result?.length === 2
+      ? [1]
+      : result?.filter((z, i) => result?.indexOf(z) !== i);
+  let duplicateInd = index?.filter((t, i) => index.indexOf(t) === i);
+  let diff = strLen - 1 - duplicateInd?.length;
+  let Substrlen;
+  console.log("98765678", {
+    id: index < diff && index.length !== 0,
+    fj: index.length === 0,
+    idi: diff === -1,
+    result,
+    index,
+    duplicateInd,
+    diff
+  });
+  if (index < diff && index.length !== 0)
+    Substrlen = result.slice(index[0] + 2, strLen)?.length;
+  else if (result?.length === 1 && result?.[0] === 0)
+    Substrlen = result?.length;
+  else if (diff === -1) Substrlen = index[0] || 0;
+  else if (index.length === 0) Substrlen = result.filter((x) => x !== "")?.length;
+  else Substrlen = duplicateInd.length;
+  return Substrlen;
 };
-console.log(lengthOfLongestSubstring())
+console.log(lengthOfLongestSubstring("ab"));
+```
 ```
 
