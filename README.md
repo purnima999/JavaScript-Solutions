@@ -4,7 +4,7 @@
 2. How to convert multi-dimension array into 1-D array [code](https://github.com/purnima999/JavaScript-Solutions/blob/main/two.js).
 3. Input: nums = [3,2,4], target = 6
    Output: [1,2]
-   
+   ```
    var twoSum = function (nums, target) {
     if (nums?.length > 0 && target) {
         for (let i = 0; i < nums.length - 1; i++) {
@@ -16,7 +16,7 @@
         }
     }
 };
-
+```
 4. Input: s = "abcabcbb"
    Output: 3
    Explanation: The answer is "abc", with the length of 3.
@@ -26,7 +26,7 @@
    Input: s = "pwwkew"
    Output: 3
    Explanation: The answer is "wke", with the length of 3. Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-   
+   ```
    var lengthOfLongestSubstring = function (s) {
     let string = s;
     let splittedStr = string?.split("");
@@ -45,4 +45,4 @@
 };
 
 console.log(lengthOfLongestSubstring())
-
+```
