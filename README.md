@@ -94,4 +94,23 @@ var lengthOfLongestSubstring = function (s) {
 };
 ```
 
+6. for loop iterations
+   ```
+ int nums = [10,20,30,12,34]
+ for(const x of nums){
+  console.log("values", x);
+}
+   ```
+output: <img width="243" alt="image" src="https://github.com/purnima999/JavaScript-Solutions/assets/57531599/01e0e21b-7bf6-420c-a9ea-347c4a3f9405">
+```
+const nums = [10,20,33,23,12,34];
+
+for(const x in nums){
+  console.log("values", x);
+}
+```
+output: <img width="212" alt="image" src="https://github.com/purnima999/JavaScript-Solutions/assets/57531599/95bfd123-82e2-474c-b958-c863e51bb0d6">
+
+8. 
+
 
